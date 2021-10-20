@@ -1,0 +1,62 @@
+.cdcard {
+  background: #ecf0f1;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .arrow {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  .arrow-left {
+    background-position: -260px -75px;
+  }
+  .arrow-right {
+    background-position: -300px -75px;
+  }
+  .album {
+    width: 640px;
+    // height: 150px;
+    .ant-carousel .slick-slide {
+      height: 160px;
+      overflow: hidden;
+    }
+    .page {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+.card {
+  width: 118px;
+  .cd_box {
+    position: relative;
+    width: 118px;
+    height: 101px;
+    overflow: hidden;
+    margin-top: 15px;
+    .cover {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-position: 0 -570px;
+      text-indent: -9999px;
+    }
+  }
+  .card_name {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

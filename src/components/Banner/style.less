@@ -1,0 +1,50 @@
+.banner {
+  height: 270px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  transition: all 0.5s;
+  .banner_left {
+    width: 730px;
+    .banner-item {
+      overflow: hidden;
+      height: 270px;
+      .image {
+        width: 100%;
+      }
+    }
+  }
+  .banner_right {
+    width: 254px;
+    height: 270px;
+    background: url(../../assets/img/download.png);
+  }
+  .banner_btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    .btn {
+      position: absolute;
+      width: 37px;
+      height: 63px;
+      background-image: url(../../assets/img/banner_sprite.png);
+      background-color: transparent;
+      cursor: pointer;
+
+      top: -25px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+    .left {
+        left: 400px;
+      background-position: 0 -360px;
+    }
+    .right {
+        right: 400px;
+      background-position: 0 -508px;
+    }
+  }
+}

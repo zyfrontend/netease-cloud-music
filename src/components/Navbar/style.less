@@ -1,0 +1,115 @@
+.navbar {
+  width: 100%;
+  height: 90px;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-bottom: #C20C0C solid 5px;
+
+	overflow: hidden;
+  a {
+    color: white;
+  }
+  .nav_left {
+    display: flex;
+    align-items: center;
+    .logo {
+      display: block;
+      width: 176px;
+      height: 60px;
+      background-position: 0 0;
+      text-indent: -9999px;
+    }
+    .item_list {
+      display: flex;
+      align-items: center;
+      line-height: 90px;
+      .item {
+        position: relative;
+        a {
+          display: block;
+          padding: 0 20px;
+          color: white;
+        }
+        // :last-of-type a {
+        //   position: relative;
+        //   &::after {
+        //     content: "";
+		// 	position: absolute;
+        //     width: 28px;
+        //     height: 19px;
+        //     background-image: url(../../assets/img/sprite_01.png);
+        //     background-position: -190px 0;
+        //     top: 20px;
+        //     right: -15px;
+        //   }
+        // }
+        &:hover a,
+        a.active {
+          color: #fff;
+          background: #000;
+          text-decoration: none;
+        }
+        .active .icon {
+          position: absolute;
+          display: inline-block;
+          width: 26px;
+          height: 13px;
+          bottom: -1px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          background-position: -209px -140px;
+          
+
+        }
+      }
+    }
+  }
+  .nav_right {
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    font-size: 12px;
+    .search {
+		    width: 10rem;
+        border-radius: 30px;
+      input {
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
+    }
+    .center {
+      width: 90px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      border: 1px solid #666;
+      border-radius: 15px;
+      margin: 0 5px;
+      background-color: #333333;
+      color: white;
+      padding: 0 5px;
+      overflow: hidden;
+    }
+    .sign {
+      width: 90px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      border: 1px solid #666;
+      border-radius: 15px;
+      margin: 0 5px;
+      background-color: #333333;
+      color: white;
+      padding: 0 5px;
+      overflow: hidden;
+    }
+  }
+  .border {
+		height: 5px;
+    background-color: #C20C0C;
+  }
+}

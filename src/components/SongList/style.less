@@ -1,0 +1,47 @@
+.songlist {
+  width: 140px;
+  margin: 0 5px;
+  cursor: pointer;
+  .songlist_cover {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    .songlist_cover_info {
+      width: 100%;
+      height: 25px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ccc;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5px;
+      .songlist_cover_info_left {
+        display: flex;
+        align-items: center;
+        span {
+          display: block;
+          background-position: 0 -24px;
+          width: 14px;
+          height: 11px;
+          margin-right: 5px;
+        }
+      }
+      .songlist_cover_info_right {
+        display: block;
+        background-position: 0 0;
+        width: 16px;
+        height: 17px;
+        
+      }
+    }
+  }
+  .songlist_title {
+    margin-top: 5px;
+    &:hover {
+      text-decoration: underline;
+
+    }
+  }
+}
