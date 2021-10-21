@@ -17,3 +17,10 @@ export const CHANGE_PLAYER_MUSIC_LYRIC_INDEX = "player/music/lyric/index";
 
 // leaderboard
 export const CHANGE_LEADER_BOARD_TOP_LIST = "leaderboard/toplist"
+export const CHANGE_LEADER_BOARD_TOP_LIST_INDEDX = "leaderboard/topList/index";
+export const CHANGE_LEADER_BOARD_TOP_LIST_DETAIL = "leaderboard/topList/detail";
+
+// songs
+export const CHANGE_SONGS_CATEGORY = "songs/category";
+export const CHANGE_SONGS_CATEGORY_NAME = "songs/category/name";
+export const CHANGE_SONGS_CATEGORY_LIST = "songs/category/list";

@@ -6,3 +6,12 @@ export function getLeaderBoardTopList() {
 		url: "/toplist",
 	})
 }
+// 获取榜单详情
+export function getLeaderBoardTopListDetail(id) {
+	return request({
+		url: "/playlist/detail",
+		params: {
+			id
+		}
+	})
+}

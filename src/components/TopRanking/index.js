@@ -35,9 +35,11 @@ export default function TopRanking(props) {
 							<div className="info">
 								<span className="name">{item.name}</span>
 								<div className="operate">
-									<button className="btn sprite_02 play" onClick={(e) => addMusic(item.id)}></button>
-									<button className="btn sprite_icon2 addto"></button>
-									<button className="btn sprite_02 favor"></button>
+									<div style={{ display: "flex" }}>
+										<button className="btn sprite_02 play" onClick={e => addMusic(item.id)}></button>
+										<button className="btn sprite_icon2 addto"></button>
+										<button className="btn sprite_02 favor"></button>
+									</div>
 								</div>
 							</div>
 						</div>

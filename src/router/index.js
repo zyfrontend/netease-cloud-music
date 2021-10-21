@@ -6,6 +6,7 @@ import Discover from "@/pages/Discover";
 // 子页面
 import Recommend from "@/pages/Discover/pages/Recommend";
 import LeaderBoard from "@/pages/Discover/pages/LeaderBoard";
+import SongList from "@/pages/Discover/pages/SongList";
 const routes = [
 	{
 		path: "/",
@@ -28,6 +29,10 @@ const routes = [
 			{
 				path: "/discover/ranking",
 				component: LeaderBoard,
+			},
+			{
+				path: "/discover/songs",
+				component: SongList,
 			}
 		],
 	},
