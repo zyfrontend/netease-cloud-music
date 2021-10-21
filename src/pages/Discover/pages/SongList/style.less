@@ -1,4 +1,57 @@
 .songslist {
 	width: 980px;
 	margin: 0 auto;
+	padding: 20px 40px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	.songslist_header {
+  	align-items: center;
+  	position: relative;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 15px;
+		border-bottom: 2px solid red;
+		box-sizing: border-box;
+		margin-bottom: 20px;
+		.category_title {
+			font-size: 20px;
+		}
+		.category_btn {
+		position: relative;
+    top: 2px;
+    width: 91px;
+    height: 31px;
+    line-height: 31px;
+    background-color: #fafafa;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    color: #0c73c2;
+    margin-left: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #fff;
+    } 
+    i {
+      position: relative;
+      left: 5px;
+      bottom: 2px;
+      display: inline-block;
+      width: 8px;
+      height: 5px;
+      background-position: -70px -543px;
+    }
+		}
+		.songslist_hot {
+			background-color: red;
+			padding: 5px 10px;
+			color: white;
+			border-radius: 4px;
+		}
+	}
+	.songslist_list {
+		display: flex;
+		justify-content: space-between;
+    flex-flow: row wrap;
+
+	}
 }
