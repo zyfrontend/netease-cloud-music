@@ -61,16 +61,16 @@ export const changePlayerMusicSwitchAction = (tag) => {
 		const order = getState().getIn(["player", "order"]);
 		switch (order) {
 			case 1: // 随机播放
-				let randomIndex = getRandomNumber(musicList.length);
+				let randomIndex = Math.floor(Math.random() * musicList.length);
 				while (randomIndex === musicIndex) {
-					randomIndex = getRandomNumber(musicList.length);
+					randomIndex = Math.floor(Math.random() * musicList.length);
 				}
 				musicIndex = randomIndex;
 				break;
 			default:	// 顺序播放
 				musicIndex += tag;
-				if (musicIndex >= musicList.length) musicIndex = 0; // 
-				if (musicIndex < 0) musicIndex = musicList.length - 1;
+				if (musicIndex === musicList.length) musicIndex = 0; // 
+				if (musicIndex === -1) musicIndex = musicList.length - 1;
 		}
 		const song = musicList[musicIndex];
 		dispatch(changePlayerMusicDetailAction(song));
