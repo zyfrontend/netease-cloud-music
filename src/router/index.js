@@ -7,6 +7,7 @@ import Discover from "@/pages/Discover";
 import Recommend from "@/pages/Discover/pages/Recommend";
 import LeaderBoard from "@/pages/Discover/pages/LeaderBoard";
 import SongList from "@/pages/Discover/pages/SongList";
+import AnchorStation from "@/pages/Discover/pages/AnchorStation";
 const routes = [
 	{
 		path: "/",
@@ -33,6 +34,10 @@ const routes = [
 			{
 				path: "/discover/songs",
 				component: SongList,
+			},
+			{
+				path: "/discover/djradio",
+				component: AnchorStation
 			}
 		],
 	},
