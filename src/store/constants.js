@@ -24,3 +24,10 @@ export const CHANGE_LEADER_BOARD_TOP_LIST_DETAIL = "leaderboard/topList/detail";
 export const CHANGE_SONGS_CATEGORY = "songs/category";
 export const CHANGE_SONGS_CATEGORY_NAME = "songs/category/name";
 export const CHANGE_SONGS_CATEGORY_LIST = "songs/category/list";
+
+
+// Anchorstation
+export const CHANGE_ANCHOR_STATION_CATEGORY_LIST = "anchorstation/category/list";
+export const CHANGE_ANCHOR_STATION_RECOMMEND_PROGRAME = "anchorstation/recommend/programme";
+export const CHANGE_ANCHOR_STATION_TOP_LIST = "anchorstation/top/list";
+

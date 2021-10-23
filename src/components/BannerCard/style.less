@@ -1,0 +1,65 @@
+.bannercard {
+		display: flex;
+		justify-content:  space-between;
+		align-items: center;;
+		.category_content {
+			flex: 1;
+			width: 900px;
+			.dots {
+  		  bottom: 5px;
+  		  li {
+  		    width: 20px;
+  		    height: 20px;
+  		    display: flex;
+  		    align-items: center;
+  		    button {
+  		      width: 6px;
+  		      height: 6px;
+  		      border-radius: 50%;
+  		      background-color: #aaa;
+  		    }
+  		  }
+  		  li.slick-active {
+  		    width: 20px;
+  		    button {
+  		      background-color: #c20c0c;
+  		    }
+  		  }
+  		}
+			.carousel_page {
+				display: flex !important;
+    		flex-wrap: wrap;
+    		padding: 30px;
+				.carousel_item {
+					width: 70px;
+					height: 70px;
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					border-radius: 5px;
+					transition: all .3s;
+					&:hover {
+						background-color: #ccc;
+					}
+				}
+			}
+		}		
+		.item_icon {
+			width: 48px;
+			height: 48px;
+		}
+		// 按钮
+		.arrow {
+			width: 20px;
+			height: 30px;
+			background-image: url(../../assets/img/radio_slide.png);
+		}
+		.arrowleft {
+			margin-left: 15px;
+			background-position: 0 -30px;
+		}
+		.arrowright {
+			margin-right: 15px;
+			background-position: -30px -30px;
+		}
+}
