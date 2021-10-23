@@ -1,5 +1,5 @@
 import { getPlayerMusicDetail, getPlayerMusicLyric } from "@/services/player";
-import { getRandomNumber, parseLyric } from "@/utils/format"
+import { parseLyric } from "@/utils/format"
 import * as actionTypes from "@/store/constants";
 
 

@@ -5,7 +5,6 @@ import { Carousel } from "antd";
 export default function BannerCard(props) {
 	const { data } = props;
 	const BtnRef = useRef();
-	console.log(data.length);
 	const PAGE_SIZE = 16;
 	// 计算分类页面数量
 	const page = Math.ceil(data.length / PAGE_SIZE) || 1;
