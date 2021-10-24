@@ -4,8 +4,10 @@ import * as actionTypes from "@/store/constants"
 const defaultRootState = Map({
 	anchorStationCategoryList: [],
 	recommendProgram: [],
-	programTopList: []
-
+	programTopList: [],
+	recommendMusics: [],
+	liveRadio: [],
+	emotionalRadio: []
 })
 
 
@@ -16,7 +18,9 @@ function reducer(state = defaultRootState, action) {
 		case actionTypes.CHANGE_ANCHOR_STATION_RECOMMEND_PROGRAME:
 			return state.set("recommendProgram", action.recommendProgram);
 		case actionTypes.CHANGE_ANCHOR_STATION_TOP_LIST:
-			return state.set("programTopList", action.programTopList)
+			return state.set("programTopList", action.programTopList);
+		case actionTypes.CHANGE_ANCHOR_STATION_RECOMMEND_MUSIC:
+			return state.set("recommendMusics", action.recommendMusics)
 		default:
 			return state;
 	}

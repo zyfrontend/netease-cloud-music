@@ -2,7 +2,8 @@ import * as actionTypes from "@/store/constants";
 import {
 	getAnchorStationCategory,
 	getAnchorStationRecommendProgram,
-	getAnchorStationTopList
+	getAnchorStationTopList,
+	getAnchorStationRecommendMusic
 } from "@/services/discover/Anchorstation";
 
 // 节目分类
@@ -44,6 +45,20 @@ export const getAnchorStationTopListAction = (limit) => {
 	return (dispatch) => {
 		getAnchorStationTopList(limit).then((res) => {
 			dispatch(changeAnchorStationTopListAction(res));
+		})
+	}
+}
+
+// 音乐推荐电台
+const changeAnchorStationRecommendMusicAction = (res) => ({
+	type: actionTypes.CHANGE_ANCHOR_STATION_RECOMMEND_MUSIC,
+	recommendMusics: res.djRadios
+})
+
+export const getAnchorStationRecommendMusicAction = (type) => {
+	return (dispatch) => {
+		getAnchorStationRecommendMusic(type).then((res) => {
+			dispatch(changeAnchorStationRecommendMusicAction(res));
 		})
 	}
 }

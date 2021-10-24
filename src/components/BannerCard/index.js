@@ -6,8 +6,9 @@ export default function BannerCard(props) {
 	const { data } = props;
 	const BtnRef = useRef();
 	const PAGE_SIZE = 16;
+	const datalength = data.length || '';
 	// 计算分类页面数量
-	const page = Math.ceil(data.length / PAGE_SIZE) || 1;
+	const page = Math.ceil(datalength / PAGE_SIZE) || 1;
 	function getSize(index) {
 		return index * PAGE_SIZE > data.length
 			? index - 1 * PAGE_SIZE

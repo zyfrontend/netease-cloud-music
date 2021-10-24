@@ -30,4 +30,5 @@ export const CHANGE_SONGS_CATEGORY_LIST = "songs/category/list";
 export const CHANGE_ANCHOR_STATION_CATEGORY_LIST = "anchorstation/category/list";
 export const CHANGE_ANCHOR_STATION_RECOMMEND_PROGRAME = "anchorstation/recommend/programme";
 export const CHANGE_ANCHOR_STATION_TOP_LIST = "anchorstation/top/list";
+export const CHANGE_ANCHOR_STATION_RECOMMEND_MUSIC = "anchorstation/recommend/music";
 

@@ -3,23 +3,27 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import {
 	getAnchorStationCategoryListAction,
 	getAnchorStationRecommendProgramAction,
-	getAnchorStationTopListAction
+	getAnchorStationTopListAction,
+	getAnchorStationRecommendMusicAction
 } from "./store/actionCreators";
 import BannerCards from "@/components/BannerCard"
 import Menu from "@/components/Menu";
 import "./style.less";
 import { getSizeImage } from "@/utils/format";
 export default function AnchorStation() {
-	const { anchorStationCategoryList, recommendProgram, programTopList } = useSelector((state) => ({
+	const { anchorStationCategoryList, recommendProgram, programTopList, recommendMusics } = useSelector((state) => ({
 		anchorStationCategoryList: state.getIn(["djradio", "anchorStationCategoryList"]),
 		recommendProgram: state.getIn(["djradio", "recommendProgram"]),
-		programTopList: state.getIn(["djradio", "programTopList"])
+		programTopList: state.getIn(["djradio", "programTopList"]),
+		recommendMusics: state.getIn(["djradio", "recommendMusics"]),
+
 	}), shallowEqual)
 	const dispatch = useDispatch()
 	useEffect(() => {
 		dispatch(getAnchorStationCategoryListAction());
 		dispatch(getAnchorStationRecommendProgramAction());
 		dispatch(getAnchorStationTopListAction(10));
+		dispatch(getAnchorStationRecommendMusicAction(2));
 	}, [dispatch])
 	return (
 		<div className="anchorstation">
@@ -37,7 +41,7 @@ export default function AnchorStation() {
 										</div>
 										<div className="program_info">
 											<div className="program_name">{item.name}</div>
-											<div>
+											<div className="radio_name">
 												{item.radio.name || ''}
 											</div>
 										</div>
@@ -56,12 +60,14 @@ export default function AnchorStation() {
 								return (
 									<div key={item.id} className="top_list_item">
 										<div className="item_rank">
-											{item.rank}
+											<span>
+												{item.rank}
+											</span>
+											<img src={getSizeImage(item.program.coverUrl, 40)} alt="" />
 										</div>
-										<div><img src={getSizeImage(item.program.coverUrl, 50)} alt="" /></div>
 										<div className="top_list_info">
-											<div>{item.program.mainSong.name || ''}</div>
-											<div>{item.program.radio.name || ''}</div>
+											<div className="info_name">{item.program.mainSong.name || ''}</div>
+											<div className="radio_name">{item.program.radio.name || ''}</div>
 										</div>
 										<div>{item.program.listenerCount}</div>
 									</div>
@@ -69,6 +75,22 @@ export default function AnchorStation() {
 							})
 						}
 					</div>
+				</div>
+			</div>
+			<div>
+				<Menu title="音乐电台-推荐" more="更多" />
+				<div className="recommend_music">
+					{recommendMusics.map((item) => {
+						return (
+							<div key={item.id} className="recommend_music_item">
+								<img src={getSizeImage(item.intervenePicUrl, 90)} alt="" />
+								<div>
+									<h1>{item.name}</h1>
+									{item.rcmdtext}
+								</div>
+							</div>
+						)
+					})}
 				</div>
 			</div>
 		</div>

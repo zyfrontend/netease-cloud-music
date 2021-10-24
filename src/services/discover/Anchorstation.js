@@ -21,3 +21,13 @@ export function getAnchorStationTopList(limit) {
 		}
 	})
 }
+
+// 音乐推荐电台
+export function getAnchorStationRecommendMusic(type) {
+	return request({
+		url: "/dj/recommend/type",
+		params: {
+			type
+		}
+	})
+}
