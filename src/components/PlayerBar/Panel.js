@@ -38,7 +38,7 @@ export default function Panel() {
 								<div className="panel_body_left_card" key={item.id}>
 									<div>
 										{(musicIndex === index) ? <span className="pannel_triangle station triangle"></span> : <span className="station"></span>}
-										<span>{item.name}</span>
+										<span className="item_test_name">{item.name}</span>
 									</div>
 									<div className="panel_body_left_card_info">
 										<span>{item.ar[0].name}</span>

@@ -14,7 +14,7 @@ import "./style.less";
 import Panel from "./Panel";
 export default function PlayerBar() {
 	// hooks
-	const [Playing, setPlaying] = useState(false);
+	const [Playing, setPlaying] = useState(true);
 	const [PlayBtn, setPlayBtn] = useState("cycle");
 	const [currentTime, setCurrentTime] = useState(0);
 	const [schedule, setSchedule] = useState(0);

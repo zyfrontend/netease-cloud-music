@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 export default function DetailHeader(props) {
 
 	const dispatch = useDispatch();
-	const { headerData } = props;
+	const { headerData, listId } = props;
 	const creator = (headerData.creator && headerData.creator) || '';
 	const tags = (headerData.tags && headerData.tags) || [];
 	return (
@@ -26,7 +26,7 @@ export default function DetailHeader(props) {
 					<span>{formatYearMonthDay(headerData.createTime)}</span>
 				</div>
 				<div className="header_info_btn">
-					<div className="sprite_button info_btn btn_player" onClick={() => { dispatch(addMusicListToPlayerList(6916674884)) }}>
+					<div className="sprite_button info_btn btn_player" onClick={() => { dispatch(addMusicListToPlayerList(listId)) }}>
 						<span className="sprite_button btn_player_icon"></span>
 						播放
 						<span className="sprite_button btn_add"></span>

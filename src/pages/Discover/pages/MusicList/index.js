@@ -20,7 +20,7 @@ export default function MusicList(props) {
 	useEffect(() => {
 		dispatch(getMusicListDetailAction(id))
 		dispatch(getMusicListDetailCommentAction(id))
-	}, [dispatch])
+	}, [dispatch, id])
 	const playlist = (musicListDetail && musicListDetail.playlist) || '';
 	const total = musicListComment.total || '';
 	const hotComments = (musicListComment.hotComments && musicListComment.hotComments) || [];
@@ -28,7 +28,7 @@ export default function MusicList(props) {
 	return (
 		<div className="music_list">
 			<div className="music_list_left">
-				<DetailHeader headerData={playlist} />
+				<DetailHeader headerData={playlist} listId={id} />
 				<DetailList listData={playlist} />
 				<Comment total={total} hotComments={hotComments} comments={comments} />
 			</div>
@@ -49,7 +49,7 @@ export default function MusicList(props) {
 						{
 							hot.map((item) => {
 								return (
-									<div className="hot_recommend_box">
+									<div key={item.id} className="hot_recommend_box">
 										<img src={getSizeImage(item.picUrl, 50)} alt="" />
 										<div className="hot_recommend_title">
 											<div>{item.name}</div>

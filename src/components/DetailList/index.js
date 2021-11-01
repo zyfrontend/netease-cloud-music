@@ -37,19 +37,19 @@ export default function DetailList(props) {
 						{
 							tracks.map((item, andex) => {
 								return (
-									<tr key={item.id}>
+									<tr key={item.al.id}>
 										<td className="td_index">
-											{andex}
-											<a className="sprite_table" onClick={() => { playerMusic(item.id) }}></a>
+											{andex + 1}
+											<a className="sprite_table" onClick={() => { playerMusic(item.id) }} alt=""></a>
 										</td>
 										<td className="td_name">{item.name}</td>
 										<td>
 											<span className="td_time">{formatMinuteSecond(item.dt)}</span>
 											<div className="td_time_btn">
-												<a className="sprite_table"></a>
-												<a className="sprite_table"></a>
-												<a className="sprite_table"></a>
-												<a className="sprite_table"></a>
+												<a className="sprite_table" href="#/" alt=""></a>
+												<a className="sprite_table" href="#/" alt=""></a>
+												<a className="sprite_table" href="#/" alt=""></a>
+												<a className="sprite_table" href="#/" alt=""></a>
 											</div>
 										</td>
 										<td className="td_ar">{(item.ar[0] && item.ar[0].name) || ''}</td>
