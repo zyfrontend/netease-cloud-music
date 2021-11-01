@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import classNames from "classnames";
 import { getLeaderBoardTopListAction, changeLeaderBoardTopListIndexAction, getLeaderBoardTopListDetailAction } from "./store/actionCreators";
+import { getPlayerMusicDetailAction } from "@/components/PlayerBar/store/actionCreators";
 import { getSizeImage, formatMonthDay, formatMinuteSecond } from "@/utils/format";
 import Operate from "@/components/Operate";
 import "./style.less";
@@ -21,6 +22,9 @@ export default function LeaderBoard() {
 	}, [dispatch, id])
 	const handleItemClick = (index) => {
 		dispatch(changeLeaderBoardTopListIndexAction(index));
+	}
+	const playerMusic = (id) => {
+		dispatch(getPlayerMusicDetailAction(id))
 	}
 	const listName = (topListDetail.playlist && topListDetail.playlist.name) || '';
 	const coverImgUrl = (topListDetail.playlist && topListDetail.playlist.coverImgUrl) || '';
@@ -109,7 +113,7 @@ export default function LeaderBoard() {
 																index < 3 ?
 																	(<img src={getSizeImage(item.al.picUrl, 50)} alt="" />) : null
 															}
-															<span className="play sprite_table"></span>
+															<span className="play sprite_table" onClick={() => { playerMusic(item.id) }}></span>
 															<span className="name">{item.name}</span>
 														</div>
 													</td>

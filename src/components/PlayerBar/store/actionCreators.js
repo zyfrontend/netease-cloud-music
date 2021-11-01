@@ -1,4 +1,5 @@
 import { getPlayerMusicDetail, getPlayerMusicLyric } from "@/services/player";
+import { getMusicListDetail } from "@/services/discover/musicListDetail";
 import { parseLyric } from "@/utils/format"
 import * as actionTypes from "@/store/constants";
 
@@ -95,6 +96,31 @@ export const getPlayerMusicLyricAction = (id) => {
 			const musicLyric = res.lrc.lyric;
 			const musicLyricList = parseLyric(musicLyric);
 			dispatch(changePlayerMusicLyricAction(musicLyricList));
+		})
+	}
+}
+
+
+export const addMusicListToPlayerList = (id) => {
+	return (dispatch, getState) => {
+		const musicList = getState().getIn(["player", "musicList"]);
+		const musicListcopy = [...musicList]
+		getMusicListDetail(id).then((res) => {
+			const musicId = res.privileges;
+			let test = [];
+			for (let musicIds of musicId) {
+				test.push(musicIds.id);
+			}
+			test.map((item) => {
+				return (
+					getPlayerMusicDetail(item).then((res) => {
+						const song = res.songs && res.songs[0];
+						musicListcopy.push(song)
+					})
+				)
+			})
+			console.log(musicListcopy);
+			dispatch(changePlayerMusicListAction(musicListcopy));
 		})
 	}
 }

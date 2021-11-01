@@ -1,8 +1,11 @@
 import { getSizeImage, formatYearMonthDay } from "@/utils/format";
 import React from "react";
+import { addMusicListToPlayerList } from "@/components/PlayerBar/store/actionCreators";
 import "./style.less";
+import { useDispatch } from "react-redux";
 export default function DetailHeader(props) {
 
+	const dispatch = useDispatch();
 	const { headerData } = props;
 	const creator = (headerData.creator && headerData.creator) || '';
 	const tags = (headerData.tags && headerData.tags) || [];
@@ -23,7 +26,7 @@ export default function DetailHeader(props) {
 					<span>{formatYearMonthDay(headerData.createTime)}</span>
 				</div>
 				<div className="header_info_btn">
-					<div className="sprite_button info_btn btn_player">
+					<div className="sprite_button info_btn btn_player" onClick={() => { dispatch(addMusicListToPlayerList(6916674884)) }}>
 						<span className="sprite_button btn_player_icon"></span>
 						播放
 						<span className="sprite_button btn_add"></span>
