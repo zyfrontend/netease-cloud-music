@@ -1,0 +1,48 @@
+.comment {
+	width: 100%;
+	.comment_header {
+		display: flex;
+		align-items: flex-end;
+		border-bottom: 2px solid red;
+		span {
+			margin: 0 2rem;
+		}
+	}
+	.imgbf {
+		width: 100%;
+		height: 10rem;
+	}	
+	.hot_comment_header {
+		border-bottom: 1px #ccc dashed;
+		margin-bottom: 1rem;
+	}
+
+	.hot_comment {
+		display: flex;
+		width: 100%;
+		border-bottom: 1px #ccc dashed;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		
+		.comment_box {
+			flex: 1;
+			margin: 0 1rem;
+			position: relative;
+			.comment_nickname {
+				color: #3498db;
+			}
+			.comment_info {
+				display: flex;
+				justify-content: space-between;
+				.btn_great {
+					background-position: -30px -95px;
+					display: block;
+					width: 17px;
+					height: 15px;
+				}
+			}
+		}
+		
+	}
+
+}

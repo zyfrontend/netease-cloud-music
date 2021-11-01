@@ -6,7 +6,8 @@ export const CHANGE_DISCOVER_RECOMMEND_NEW_DVD = "discover/recommend/newDvd";
 export const CHANGE_DISCOVER_RECOMMEND_SOARING = "discover/recommend/soaring";
 export const CHANGE_DISCOVER_RECOMMEND_NEWSONG = "discover/recommend/newSong";
 export const CHANGE_DISCOVER_RECOMMEND_ORIGINAL = "discover/recommend/original";
-
+export const CHANGE_DISCOVER_RECOMMEND_HOT_SINGER = "discover/recommend/hot/singer";
+export const CHANGE_DISCOVER_RECOMMEND_RADIO_STATION = "discover/recommend/radio/station";
 // player
 export const CHANGE_PLAYER_MUSIC_DETAIL = "player/music/detail";
 export const CHANGE_PLAYER_MUSIC_ORDER = "player/music/order";
@@ -32,3 +33,8 @@ export const CHANGE_ANCHOR_STATION_RECOMMEND_PROGRAME = "anchorstation/recommend
 export const CHANGE_ANCHOR_STATION_TOP_LIST = "anchorstation/top/list";
 export const CHANGE_ANCHOR_STATION_RECOMMEND_MUSIC = "anchorstation/recommend/music";
 
+// musicDetail
+
+export const CHANGE_MUSIC_DETAIL_LIST = "music/list/detail";
+export const CHANGE_MUSIC_DETAIL = "music/detail";
+export const CHANGE_MUSIC_DETAIL_COMMENT = "music/detail/comment";

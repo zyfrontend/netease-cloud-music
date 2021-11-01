@@ -1,0 +1,136 @@
+.detail_list {
+	.detail_list_header {
+		border-bottom: 2px red solid;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		span {
+			margin: 0 10px;
+		}
+		.left {
+			display: flex;
+			align-items: flex-end;
+		}
+	}
+	table {
+		width: 100%;
+		border: 1px #ccc solid;
+	}
+
+	th {
+		flex: 1;
+		text-align: left;
+		background-position: 0 0;
+		background-repeat: repeat-x;
+		height: 38px;
+		line-height: 38px;
+		overflow: hidden;
+		&:nth-child(1){
+			max-width: 4rem;
+			border-right: 1px solid #ccc ;
+		}&:nth-child(3){
+			max-width: 6rem;
+			border-right: 1px solid #ccc ;
+			border-left: 1px solid #ccc;
+		}&:nth-child(4){
+			max-width: 6rem;
+			border-right: 1px solid #ccc ;
+		}&:nth-child(5){
+			max-width: 8rem;
+		}
+	}
+	tr {
+		display: flex;
+		&:nth-child(odd) {
+			background-color: #f7f7f7;
+		}
+	}
+	td {
+		flex: 1;
+		padding: 0 5px;
+		height: 31px;
+		line-height: 31px;
+		&:nth-child(1){
+			max-width: 4rem;
+		}&:nth-child(3){
+			max-width: 6rem;
+			.td_time_btn {
+				display: none;
+				a {
+					display: inline-block;
+					margin: 5px 3px;
+				&:nth-child(1){
+					background-position: -106px -174px;
+					width: 16px;
+					height: 15px;
+				}
+				&:nth-child(2){
+					background-position: -21px -174px;
+					width: 16px;
+					height: 15px;
+				}
+				&:nth-child(3){
+					background-position: -22px -195px;
+					width: 16px;
+					height: 15px;
+				}
+				&:nth-child(3){
+					background-position: -106px -174px;
+					width: 16px;
+					height: 15px;
+				}
+				}
+
+				
+			}
+			&:hover {
+				.td_time {
+					display: none;
+				}
+				.td_time_btn {
+					display: block;
+				}
+			}
+		}&:nth-child(4){
+			max-width: 6rem;
+			white-space: nowrap;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+		}&:nth-child(5){
+			max-width: 8rem;
+			white-space: nowrap;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+		}
+		
+	}
+	
+	.td_index {
+		position: relative;
+		a {
+			position: absolute;
+			right: 0;
+			display: inline-block;
+			background-position: 0 -128px;
+			width: 17px;
+			height: 17px;
+			margin-top: 7px;
+		}
+	}
+	.hint {
+		margin: 3rem auto;
+		width: 200px;
+		text-align: center;
+	}
+	.downloadnow {
+		cursor: pointer;
+		background-color: red;
+		border-radius: 20px;
+		text-align: center;
+		color: white;
+		margin: 0 auto;
+		display: block;
+		text-decoration: none;
+		width: 100px;
+	}
+}

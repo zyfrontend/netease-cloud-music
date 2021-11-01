@@ -9,6 +9,8 @@ const defaultRootState = Map({
 	soaring: [],
 	newSong: [],
 	original: [],
+	hotSinger: [],
+	radioStation: []
 });
 
 function reducer(state = defaultRootState, action) {
@@ -25,6 +27,10 @@ function reducer(state = defaultRootState, action) {
 			return state.set("newSong", action.newSong);
 		case actionTypes.CHANGE_DISCOVER_RECOMMEND_ORIGINAL:
 			return state.set("original", action.original);
+		case actionTypes.CHANGE_DISCOVER_RECOMMEND_HOT_SINGER:
+			return state.set("hotSinger", action.hotSinger);
+		case actionTypes.CHANGE_DISCOVER_RECOMMEND_RADIO_STATION:
+			return state.set("radioStation", action.radioStation);
 		default:
 			return state;
 	}

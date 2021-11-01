@@ -1,0 +1,93 @@
+.detail_header {
+	padding:  1;
+	display: flex;
+	.header_img {
+		padding: 5px;
+		border: 1px solid #ccc;
+		}
+	.header_info {
+		padding-left: 30px;
+		.header_info_title {
+			display: flex;
+			align-items: center;
+			.title_icon {
+				background-position: 0 -243px;
+				display: block;
+				margin-right: 10px;
+				width: 54px;
+				height: 24px;
+			}
+		}
+		.header_info_author {
+			margin: 10px 0;
+			a {
+				color: blue;
+				padding: 0 20px;
+			}
+		}
+		.header_info_btn {
+			display: flex;
+			width: 400px;
+			justify-content: space-between;
+				.info_btn {
+				height: 31px;
+				line-height: 31px;
+				padding-left: 30px;
+				height: 31px;
+				display: flex;
+				.sprite_button {
+				background-position: -245px -3223px;
+				width: 5px;
+				display: block;
+				height: 31px;
+				}
+			}
+			.btn_player {
+				padding: 0;
+				background-position: 0 -3460px;
+				color: white;
+				.btn_player_icon {
+					background-position: 0 -1622px;
+					margin: 5px;
+					width: 20px;
+					height: 18px;
+					display: block;
+				}
+				.btn_add {
+					background-position: 0 -1588px;
+					width: 32px;
+					height: 31px;
+					display: block;
+					margin-left: 5px;
+				}
+			}
+			.btn_comment {
+				background-position: 0 -1465px;
+			}
+			.btn_download {
+				background-position: 0 -2761px;
+			}
+			.btn_share {
+				background-position: 0 -1225px;
+			}
+			.btn_collect {
+				background-position: 0 -3180px;
+			}
+		}
+		.header_info_tag {
+			display: flex;
+			margin: 20px 0;
+			.header_tag {
+				margin: 0 10px;
+				display: block;
+				border: 1px solid #ccc;
+				border-radius: 20px;
+				text-align: center;
+				width: 60px;
+				&:hover {
+					background-color: #ccc;
+				}
+			}
+		}
+	}
+}

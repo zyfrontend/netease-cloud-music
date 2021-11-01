@@ -52,7 +52,9 @@ export function formatMonthDay(time) {
 export function formatMinuteSecond(time) {
 	return formatDate(time, "mm:ss");
 }
-
+export function formatYearMonthDay(time) {
+	return formatDate(time, "yyyy-MM-dd")
+}
 
 // 播放业务
 export function getPlaySong(id) {

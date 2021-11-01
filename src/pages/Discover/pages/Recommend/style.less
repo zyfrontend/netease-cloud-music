@@ -7,7 +7,7 @@
     border-right: 1px solid #7f8c8d;
     .recommend_left {
       width: 730px;
-      padding: 0 15px;
+      padding: 0 20px;
       .recommend_song_list {
         display: flex;
         justify-content: space-between;
@@ -24,6 +24,73 @@
       width: 254px;
       border-left: 1px solid #7f8c8d;
       box-sizing: border-box;
+			
+			.login_div {
+				position: relative;
+				background-position: 0 0;
+				width: 250px;
+				height: 126px;
+				padding: 20px;
+				.login_btn {
+					cursor: pointer;
+					background-position: 	0 -195px;
+					text-align: center;
+					line-height: 31px;
+					color: white;
+					width: 100px;
+					height: 31px;
+					position: absolute;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					bottom: -20px;
+					&:hover {
+						background-position: -110px -195px;
+					}
+				}
+			}
+			.hot_singer {
+				padding: 10px 10px;
+				.hot_singer_title {
+					display: flex;
+					justify-content: space-between;
+					padding: 10px 5px;
+					border-bottom: 1px solid #ccc;
+				}
+				.hot_singer_item {
+					border: 1px solid #ccc;
+					display: flex;
+					margin: 10px 0;
+					div {
+						padding: 10px 10px;
+					}
+				}
+				.apply_musician {
+					display: flex;
+					justify-content: center;
+					font-weight: 300;
+					padding: 5px 10px;
+					text-align: center;
+					border-radius: 5px;
+					background-color: #ccc;
+				}
+			}
+			.radio_station {
+				padding: 10px 10px; 
+				.radion_station_title {
+					padding: 5px;
+					border-bottom: 1px solid #ccc;
+					margin: 10px;
+				}
+			.radio_station_item {
+				display: flex;
+				border: 1px solid #ccc;
+				margin: 10px 0;
+				div{
+					padding: 10px;
+				}
+			}
+			}
+			
     }
   }
 }

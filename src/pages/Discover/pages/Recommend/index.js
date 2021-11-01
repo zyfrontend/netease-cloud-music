@@ -5,7 +5,9 @@ import {
 	getDiscoverRecommendBannersAction,
 	getDiscoverRecommendHotAction,
 	getDiscoverRecommendNewDvdAction,
-	getDiscoverRecommendTopListAction
+	getDiscoverRecommendTopListAction,
+	getDiscoverRecommendHotSingerAction,
+	getDiscoverRecommendHotDJAction
 } from "./store/actionCreators";
 // components
 import Banner from "@/components/Banner";
@@ -15,9 +17,10 @@ import CDCard from "@/components/CDCard";
 import TopRanking from "@/components/TopRanking";
 // style
 import "./style.less";
+import { getSizeImage } from "@/utils/format";
 
 export default function Recommend() {
-	const { banners, hot, newDvd, soaring, newSong, original } = useSelector(
+	const { banners, hot, newDvd, soaring, newSong, original, hotSinger, radioStation } = useSelector(
 		(state) => ({
 			banners: state.getIn(["recommend", "banners"]),
 			hot: state.getIn(["recommend", "hot"]),
@@ -25,6 +28,8 @@ export default function Recommend() {
 			soaring: state.getIn(["recommend", "soaring"]),
 			newSong: state.getIn(["recommend", "newSong"]),
 			original: state.getIn(["recommend", "original"]),
+			hotSinger: state.getIn(["recommend", "hotSinger"]),
+			radioStation: state.getIn(["recommend", "radioStation"])
 		}),
 		shallowEqual
 	);
@@ -38,6 +43,8 @@ export default function Recommend() {
 		dispatch(getDiscoverRecommendTopListAction(0));
 		dispatch(getDiscoverRecommendTopListAction(2));
 		dispatch(getDiscoverRecommendTopListAction(3));
+		dispatch(getDiscoverRecommendHotSingerAction(5));
+		dispatch(getDiscoverRecommendHotDJAction(5));
 	}, [dispatch]);
 
 	return (
@@ -53,7 +60,10 @@ export default function Recommend() {
 						/>
 						<div className="recommend_song_list">
 							{hot.map((item) => {
-								return <SongList data={item} key={item.id} />;
+								return (
+									<SongList data={item} key={item.id} />
+								)
+
 							})}
 						</div>
 					</div>
@@ -71,7 +81,50 @@ export default function Recommend() {
 						</div>
 					</div>
 				</div>
-				<div className="recommend_right">123</div>
+				<div className="recommend_right">
+					<div className="sprite_02 login_div">
+						<span>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</span>
+						<div className="sprite_02 login_btn">用户登录</div>
+					</div>
+					<div className="hot_singer">
+						<div className="hot_singer_title">
+							<span>热门歌手</span>
+							<span>查看全部</span>
+						</div>
+						{
+							hotSinger.map((item) => {
+								return (
+									<div className="hot_singer_item" key={item.name}>
+										<img src={getSizeImage(item.picUrl, 70)} alt="" />
+										<div>
+											{item.name}
+										</div>
+									</div>
+								)
+							})
+						}
+						<div className="apply_musician">
+							申请成为音乐人
+						</div>
+					</div>
+					<div className="radio_station">
+						<div className="radion_station_title">
+							<span>热门主播</span>
+						</div>
+						{
+							radioStation.map((item) => {
+								return (
+									<div className="radio_station_item" key={item.nickName}>
+										<img src={getSizeImage(item.avatarUrl, 70)} alt="" />
+										<div>
+											{item.nickName}
+										</div>
+									</div>
+								)
+							})
+						}
+					</div>
+				</div>
 			</div>
 		</div>
 	);
